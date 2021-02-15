@@ -1,0 +1,12 @@
+<h3>Chat</h3>
+<hr />
+<!-- Inicio contenedor de mensajes -->
+<div class="app-mensajes" id="app-mensajes">
+  <div class="text-start" *ngFor="let chat of _chatService.chats">
+
+    <p>{{chat.nombre}}: {{chat.mensaje}}</p>
+  </div>
+
+  <input type="text" class="form-control" name="mensaje" placeholder="Enviar mensaje" [(ngModel)]="mensaje" (keyup.enter)="enviar_mensaje()" />
+
+</div>
